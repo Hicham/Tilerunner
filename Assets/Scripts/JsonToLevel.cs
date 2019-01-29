@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 
 public class JsonToLevel : MonoBehaviour {
+    
     string path;
     string jsonString;
 
@@ -15,16 +15,8 @@ public class JsonToLevel : MonoBehaviour {
 
     public Text levelName;
 
-    float x_offset = 0f;
-    float y_offset = 0f;
-
-    //float plus1 = 0f;
-    //float plus2 = 0f;
-    //float plus3 = 0f;
-    //float plus4 = 0f;
-    //float plus5 = 0f;
-
-
+    private float x_offset = 0f;
+    private float y_offset = 0f;
 
     void Start()
     {
@@ -69,147 +61,28 @@ public class JsonToLevel : MonoBehaviour {
 
             y_offset += 1;
         }
-
-
-        //foreach (char letter in json.t1)
-        //{
-        //    if (letter.ToString() == "0" || letter.ToString() == " ")
-        //    {
-        //        gameObj = null;
-        //    }
-        //    else if (letter.ToString() == "1")
-        //    {
-        //        gameObj = object1;
-
-        //    }
-        //    else if (letter.ToString() == "2")
-        //    {
-        //        gameObj = object2;
-        //    }
-
-        //    if (gameObj != null)
-        //    {
-        //        Instantiate(gameObj, new Vector2(spawnPos.position.x + plus1, spawnPos.position.y - 0), Quaternion.identity);
-        //    }
-
-        //    plus1 += 1f;
-        //}
-
-        //foreach (char letter in json.t2)
-        //{
-        //    if (letter.ToString() == "0" || letter.ToString() == " ")
-        //    {
-        //        gameObj = null;
-        //    }
-        //    else if (letter.ToString() == "1")
-        //    {
-        //        gameObj = object1;
-
-        //    }
-        //    else if (letter.ToString() == "2")
-        //    {
-        //        gameObj = object2;
-        //    }
-
-        //    if (gameObj != null)
-        //    {
-        //        Instantiate(gameObj, new Vector2(spawnPos.position.x + plus2, spawnPos.position.y - 1), Quaternion.identity);
-        //    }
-
-        //    plus2  += 1f;
-        //}
-
-        //foreach (char letter in json.t3)
-        //{
-        //    if (letter.ToString() == "0" || letter.ToString() == " ")
-        //    {
-        //        gameObj = null;
-        //    }
-        //    else if (letter.ToString() == "1")
-        //    {
-        //        gameObj = object1;
-
-        //    }
-        //    else if (letter.ToString() == "2")
-        //    {
-        //        gameObj = object2;
-        //    }
-
-        //    if (gameObj != null)
-        //    {
-        //        Instantiate(gameObj, new Vector2(spawnPos.position.x + plus3, spawnPos.position.y - 2), Quaternion.identity);
-        //    }
-
-        //    plus3 += 1f;
-        //}
-
-        //foreach (char letter in json.t4)
-        //{
-        //    if (letter.ToString() == "0" || letter.ToString() == " ")
-        //    {
-        //        gameObj = null;
-        //    }
-        //    else if (letter.ToString() == "1")
-        //    {
-        //        gameObj = object1;
-
-        //    }
-        //    else if (letter.ToString() == "2")
-        //    {
-        //        gameObj = object2;
-        //    }
-
-        //    if (gameObj != null)
-        //    {
-        //        Instantiate(gameObj, new Vector2(spawnPos.position.x + plus4, spawnPos.position.y - 3), Quaternion.identity);
-        //    }
-
-        //    plus4 += 1f;
-        //}
-
-        //foreach (char letter in json.t5)
-        //{
-        //    if (letter.ToString() == "0" || letter.ToString() == " ")
-        //    {
-        //        gameObj = null;
-        //    }
-        //    else if (letter.ToString() == "1")
-        //    {
-        //        gameObj = object1;
-
-        //    }
-        //    else if (letter.ToString() == "2")
-        //    {
-        //        gameObj = object2;
-        //    }
-
-        //    if (gameObj != null)
-        //    {
-        //        Instantiate(gameObj, new Vector2(spawnPos.position.x + plus5, spawnPos.position.y - 4), Quaternion.identity);
-        //    }
-
-        //    plus5 += 1f;
-        //}
-
     }
 
+    //    update the camera position (may or may not change later on)
     void Update()
     {
+<<<<<<< HEAD
     
 
         
+=======
+        Player player = FindObjectsOfType(typeof(Player))[0] as Player;    //    getting the player object, directly.
+        //    transform.position = the camera position
+        transform.position = new Vector3(player.transform.position.x,  player.transform.position.y + 2, transform.position.z);
+>>>>>>> development-wesley
     }
 }
 
 [System.Serializable]
 public class Data
 {
+    
     public string Level;
     public List<string> Layers = new List<string>();
-    ////public string t1;
-    ////public string t2;
-    ////public string t3;
-    ////public string t4;
-    ////public string t5;
 
 }
