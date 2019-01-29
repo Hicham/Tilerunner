@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - QuestionBlock
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - UI
   - 
   - 
-  - Skybox
+  - Enemies
   - Player
-  - Obstacle
-  - Landscape
+  - 
+  - 
   - 
   - 
   - 
@@ -40,13 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Skybox
-    uniqueID: 3399724499
-    locked: 0
-  - name: Player
-    uniqueID: 2809856995
-    locked: 0
-  - name: Obstacle
-    uniqueID: 3835484377
     locked: 0
