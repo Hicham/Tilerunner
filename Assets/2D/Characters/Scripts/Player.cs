@@ -1,47 +1,45 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Controller2D))]
-public class Player : MonoBehaviour
-{
-    public float jumpHeight = 4;
-    public float jumpGravity = .4f;
-    private float accelerationTimeAirborne = .2f;
-    private float accelerationTimeGrounded = .1f;
-    private float moveSpeed = 6;
-    
-    private float gravity;
-    private float jumpVelocity = 8;
-    private Vector3 velocity;
-    private float velocityXSmoothing;
-    
-    private Controller2D controller;
+public class Player : Controller2D {
 
-    void Start()
+    public float maxSpeed = 7;
+    public float jumpTakeOffSpeed = 7;
+
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
+    // Use this for initialization
+    void Awake () 
     {
-        controller = GetComponent<Controller2D>();
-
-        gravity =- (2 * jumpHeight) / Mathf.Pow(jumpGravity, 2);
-        jumpVelocity = Mathf.Abs(gravity) * jumpGravity;
-        print("Gravity: " + gravity + " Jump velocity: " + jumpVelocity);
+        spriteRenderer = GetComponent<SpriteRenderer> (); 
+//        animator = GetComponent<Animator> ();
     }
 
-    private void Update()
+    protected override void ComputeVelocity()
     {
-        if (controller.collisions.above || controller.collisions.below)
-        {
-            velocity.y = 0;
-        }
-        
-        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Vector2 move = Vector2.zero;
 
-        if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
+        move.x = Input.GetAxis ("Horizontal");
+
+        if (Input.GetButtonDown ("Jump") && grounded) {
+            velocity.y = jumpTakeOffSpeed;
+        } else if (Input.GetButtonUp ("Jump")) 
         {
-            velocity.y = jumpVelocity;
+            if (velocity.y > 0.50) {
+                velocity.y = velocity.y * 0.5f;
+            }
         }
-        
-        float targetVelocityX = input.x * moveSpeed;
-        velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, controller.collisions.below ? accelerationTimeGrounded : accelerationTimeAirborne);
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+
+        bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
+        if (flipSprite) 
+        {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+        }
+
+//        animator.SetBool ("grounded", grounded);
+//        animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
+
+        targetVelocity = move * maxSpeed;
     }
 }
