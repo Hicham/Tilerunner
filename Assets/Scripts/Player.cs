@@ -96,7 +96,8 @@ public class Player : MonoBehaviour
         Vector3 pos = transform.localPosition;
         if (pos.y < GameObject.Find("Main Camera").GetComponent<JsonToLevel>().lowestblock - 10)
         {
-            Application.LoadLevel("Level");
+            Destroy(this);
+            GameObject.Find("Death Menu").GetComponent<DeathScreen>().dead = true;
         }
     }
 

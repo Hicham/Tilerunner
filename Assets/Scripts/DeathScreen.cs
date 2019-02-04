@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class DeathScreen : MonoBehaviour
 {
-
-    public string respawn;
-
-    public string mainmenu;
+    public bool dead = false;
 
     public GameObject deathMenuCanvas;
    
@@ -15,7 +12,14 @@ public class DeathScreen : MonoBehaviour
 
     void Update()
     {
-        
+        if (dead)
+        {
+            deathMenuCanvas.SetActive(true);
+        }
+        else
+        {
+            deathMenuCanvas.SetActive(false);
+        }
     }
 
     public void Respawn()
