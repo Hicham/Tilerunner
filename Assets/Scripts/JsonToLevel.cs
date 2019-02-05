@@ -3,14 +3,16 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 
-public class JsonToLevel : MonoBehaviour {
-    
+public class JsonToLevel : MonoBehaviour
+{
+
     string path;
     string jsonString;
 
     public Transform spawnPos;
-    public GameObject object1; 
-    public GameObject object2;
+    public GameObject playerObject;
+    public GameObject deadlyObject;
+    public GameObject brickObject;
     private GameObject gameObj;
 
     public Text levelName;
@@ -43,13 +45,17 @@ public class JsonToLevel : MonoBehaviour {
                 {
                     gameObj = null;
                 }
-                else if (letter.ToString() == "G")
-                {
-                    gameObj = object1;
-                }
                 else if (letter.ToString() == "P")
                 {
-                    gameObj = object2;
+                    gameObj = playerObject;
+                }
+                else if (letter.ToString() == "E")
+                {
+                    gameObj = deadlyObject;
+                }
+                else if (letter.ToString() == "G")
+                {
+                    gameObj = brickObject;
                 }
 
                 if (gameObj != null)
@@ -58,7 +64,9 @@ public class JsonToLevel : MonoBehaviour {
                     {
                         lowestblock = spawnPos.position.y - y_offset;
                     }
-                    Instantiate(gameObj, new Vector2(spawnPos.position.x + x_offset, spawnPos.position.y - y_offset), Quaternion.identity);
+
+                    Instantiate(gameObj, new Vector2(spawnPos.position.x + x_offset, spawnPos.position.y - y_offset),
+                        Quaternion.identity);
                 }
 
                 x_offset += 1;
@@ -72,8 +80,9 @@ public class JsonToLevel : MonoBehaviour {
     void Update()
     {
         Player player = FindObjectsOfType(typeof(Player))[0] as Player;
-        if (!(player.transform.position.y < lowestblock)) transform.position = new Vector3(player.transform.position.x,  player.transform.position.y + 2, transform.position.z);
+        if (!(player.transform.position.y < lowestblock)) transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, transform.position.z);
     }
+
 }
 
 [System.Serializable]
