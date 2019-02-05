@@ -1,0 +1,9 @@
+diff a/Assets/Resources/Player.prefab b/Assets/Resources/Player.prefab	(rejected hunks)
+@@ -38,6 +38,7 @@
+       objectReference: {fileID: 0}
+     - target: {fileID: 466550, guid: a2921b55bcf164853960c853662332ad, type: 3}
+       propertyPath: m_LocalPosition.y
++      value: -1.4976
+       objectReference: {fileID: 0}
+     - target: {fileID: 466550, guid: a2921b55bcf164853960c853662332ad, type: 3}
+       propertyPath: m_LocalPosition.z
