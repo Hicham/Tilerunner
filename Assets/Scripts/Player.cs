@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public PlayerState playerState = PlayerState.idle;
 
     private bool grounded = false;
+    
     // Start is called before the first frame update
     void Start()
     {
