@@ -23,10 +23,11 @@ public class Player : MonoBehaviour
     public PlayerState playerState = PlayerState.idle;
 
     private bool grounded = false;
+    
     // Start is called before the first frame update
     void Start()
     {
-        //Fall();
+        Fall();
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
         CheckPlayerInput();
         UpdatePlayerPosition();
         UpdateAnimationStates();
-//        CheckPlayerHeight();
+        CheckPlayerHeight();
         
     }
 
@@ -94,9 +95,10 @@ public class Player : MonoBehaviour
     void CheckPlayerHeight()
     {
         Vector3 pos = transform.localPosition;
-        if (pos.y < 0)
+        if (pos.y < GameObject.Find("Main Camera").GetComponent<JsonToLevel>().lowestblock - 10)
         {
-            Application.LoadLevel("Level 1");
+            Destroy(this);
+            GameObject.Find("Death Menu").GetComponent<DeathScreen>().dead = true;
         }
     }
 
@@ -194,9 +196,9 @@ public class Player : MonoBehaviour
 
     Vector3 CheckCeilingRays(Vector3 pos)
     {
-        Vector2 originLeft = new Vector2(pos.x - 0.3f, pos.y + 1f);
-        Vector2 originMiddle = new Vector2(pos.x, pos.y + 1f);
-        Vector2 originRight = new Vector2(pos.x + 0.3f, pos.y + 1f);
+        Vector2 originLeft = new Vector2(pos.x - 0.3f, pos.y + 0.8f);
+        Vector2 originMiddle = new Vector2(pos.x, pos.y + 0.8f);
+        Vector2 originRight = new Vector2(pos.x + 0.3f, pos.y + 0.8f);
 
         RaycastHit2D ceilLeft = Physics2D.Raycast(originLeft, Vector2.up, velocity.y * Time.deltaTime, floorMask);
         RaycastHit2D ceilMiddle = Physics2D.Raycast(originMiddle, Vector2.up, velocity.y * Time.deltaTime, floorMask);

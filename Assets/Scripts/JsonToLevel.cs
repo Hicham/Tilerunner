@@ -16,8 +16,9 @@ public class JsonToLevel : MonoBehaviour {
 
     public Text levelName;
 
+    public float lowestblock = 0f;
     private float x_offset = 0f;
-    private float y_offset = 0f;
+    public float y_offset = 0f;
 
     void Start()
     {
@@ -57,6 +58,11 @@ public class JsonToLevel : MonoBehaviour {
                 }
                 if (gameObj != null)
                 {
+                    if (spawnPos.position.y - y_offset <= lowestblock)
+                    {
+                        Debug.Log("Changed lowest block to: " + (spawnPos.position.y - y_offset));
+                        lowestblock = spawnPos.position.y - y_offset;
+                    }
                     Instantiate(gameObj, new Vector2(spawnPos.position.x + x_offset, spawnPos.position.y - y_offset), Quaternion.identity);
                 }
 
@@ -70,9 +76,8 @@ public class JsonToLevel : MonoBehaviour {
     //    update the camera position (may or may not change later on)
     void Update()
     {
-        Player player = FindObjectsOfType(typeof(Player))[0] as Player;    //    getting the player object, directly.
-        //    transform.position = the camera position
-        transform.position = new Vector3(player.transform.position.x,  player.transform.position.y + 2, transform.position.z);
+        Player player = FindObjectsOfType(typeof(Player))[0] as Player;
+        if (!(player.transform.position.y < lowestblock)) transform.position = new Vector3(player.transform.position.x,  player.transform.position.y + 2, transform.position.z);
     }
 }
 

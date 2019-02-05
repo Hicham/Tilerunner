@@ -17,12 +17,13 @@ public class StompCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("test");
             Destroy(gameObject.transform.parent.gameObject);
             
-            Player player = other.gameObject.GetComponent<Player>();
-
-            player.playerState = Player.PlayerState.jumping;
-            player.velocity = new Vector2(player.velocity.x, 6);
+//            Player player = other.gameObject.GetComponent<Player>();
+//
+//            player.playerState = Player.PlayerState.jumping;
+//            player.velocity = new Vector2(player.velocity.x, 6);
         }
     }
 }
