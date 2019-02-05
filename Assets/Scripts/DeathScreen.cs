@@ -29,6 +29,6 @@ public class DeathScreen : MonoBehaviour
 
     public void MainMenu()
     {
-        Application.LoadLevel("GameOver");
+        Application.LoadLevel("ShowLevels");
     }
 }

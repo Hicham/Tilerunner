@@ -22,11 +22,11 @@ public class JsonToLevel : MonoBehaviour {
     void Start()
     {
 
-        path = Application.streamingAssetsPath + "/data.json";
+        path = Application.streamingAssetsPath + "/" + ClickedFile.name;
         jsonString = File.ReadAllText(path);
         Data json = JsonUtility.FromJson<Data>(jsonString);
 
-        levelName.text = json.Level.ToString();
+        levelName.text = json.Level;
 
         GenerateLevel(json);
     }
@@ -56,7 +56,6 @@ public class JsonToLevel : MonoBehaviour {
                 {
                     if (spawnPos.position.y - y_offset <= lowestblock)
                     {
-                        Debug.Log("Changed lowest block to: " + (spawnPos.position.y - y_offset));
                         lowestblock = spawnPos.position.y - y_offset;
                     }
                     Instantiate(gameObj, new Vector2(spawnPos.position.x + x_offset, spawnPos.position.y - y_offset), Quaternion.identity);
