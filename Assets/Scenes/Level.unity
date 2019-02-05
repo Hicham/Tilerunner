@@ -500,8 +500,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 885982066}
-  object1: {fileID: 118424, guid: 4e582a70e0a5c4082bef410c4ddf6cd5, type: 3}
-  object2: {fileID: 2684197165133321763, guid: 3c3464b3316880b499808369848da3ab, type: 3}
+  playerObject: {fileID: 103438, guid: 3c3464b3316880b499808369848da3ab, type: 3}
+  deadlyObject: {fileID: 124218, guid: 88bee9c626d28fe42a680396b4d7eca1, type: 3}
+  castleObject: {fileID: 112090, guid: bf1f0766c99f04c47afb988e39cfa5cf, type: 3}
+  brickObject: {fileID: 118424, guid: 4e582a70e0a5c4082bef410c4ddf6cd5, type: 3}
   levelName: {fileID: 382949730}
   lowestblock: 0
   y_offset: 0

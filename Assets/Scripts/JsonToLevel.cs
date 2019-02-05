@@ -12,6 +12,7 @@ public class JsonToLevel : MonoBehaviour
     public Transform spawnPos;
     public GameObject playerObject;
     public GameObject deadlyObject;
+    public GameObject castleObject;
     public GameObject brickObject;
     private GameObject gameObj;
 
@@ -52,6 +53,10 @@ public class JsonToLevel : MonoBehaviour
                 else if (letter.ToString() == "E")
                 {
                     gameObj = deadlyObject;
+                }
+                else if (letter.ToString() == "C")
+                {
+                    gameObj = castleObject;
                 }
                 else if (letter.ToString() == "G")
                 {

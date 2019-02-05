@@ -8,7 +8,7 @@ public class Castle : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Application.LoadLevel("Win");
+            Application.LoadLevel("ShowLevels");
         }
     }
 }

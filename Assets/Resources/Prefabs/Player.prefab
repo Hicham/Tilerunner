@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVelocity: 23
-  velocity: {x: 7, y: 7}
-  gravity: 0
+  velocity: {x: 7, y: 0}
+  gravity: 65
   wallMask:
     serializedVersion: 2
     m_Bits: 1
