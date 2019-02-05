@@ -25,7 +25,14 @@ public class JsonToLevel : MonoBehaviour
     void Start()
     {
 
-        path = Application.streamingAssetsPath + "/" + ClickedFile.name;
+        if (ClickedFile.name == null)
+        {
+            path = Application.streamingAssetsPath + "/data.json";
+        }
+        else
+        {
+            path = Application.streamingAssetsPath + "/" + ClickedFile.name;
+        }
         jsonString = File.ReadAllText(path);
         Data json = JsonUtility.FromJson<Data>(jsonString);
 
@@ -84,8 +91,11 @@ public class JsonToLevel : MonoBehaviour
     //    update the camera position (may or may not change later on)
     void Update()
     {
-        Player player = FindObjectsOfType(typeof(Player))[0] as Player;
-        if (!(player.transform.position.y < lowestblock)) transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, transform.position.z);
+        if (GameObject.Find("Death Menu").GetComponent<DeathScreen>().dead == false)
+        {
+            Player player = FindObjectsOfType(typeof(Player))[0] as Player;
+            if (!(player.transform.position.y < lowestblock)) transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, transform.position.z);
+        }
     }
 
 }
