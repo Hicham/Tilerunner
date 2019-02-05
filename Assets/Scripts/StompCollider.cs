@@ -15,10 +15,8 @@ public class StompCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
         if (other.CompareTag("Player"))
         {
-            Debug.Log("test");
             Destroy(gameObject.transform.parent.gameObject);
             
             Player player = other.gameObject.GetComponent<Player>();
