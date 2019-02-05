@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         walking
     }
     
-    private PlayerState playerState = PlayerState.idle;
+    public PlayerState playerState = PlayerState.idle;
 
     private bool grounded = false;
     // Start is called before the first frame update
@@ -209,7 +209,8 @@ public class Player : MonoBehaviour
             if (ceilLeft)
             {
                 hitRay = ceilLeft;
-            } else if (ceilMiddle)
+            }
+            else if (ceilMiddle)
             {
                 hitRay = ceilMiddle;
             }

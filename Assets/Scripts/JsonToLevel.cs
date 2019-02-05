@@ -11,6 +11,7 @@ public class JsonToLevel : MonoBehaviour {
     public Transform spawnPos;
     public GameObject object1; 
     public GameObject object2;
+    public GameObject deadlyObject;
     private GameObject gameObj;
 
     public Text levelName;
@@ -50,7 +51,10 @@ public class JsonToLevel : MonoBehaviour {
                 {
                     gameObj = object2;
                 }
-
+                else if (letter.ToString() == "E")
+                {
+                    gameObj = deadlyObject;
+                }
                 if (gameObj != null)
                 {
                     Instantiate(gameObj, new Vector2(spawnPos.position.x + x_offset, spawnPos.position.y - y_offset), Quaternion.identity);
