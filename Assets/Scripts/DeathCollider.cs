@@ -15,6 +15,7 @@ public class DeathCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(other.gameObject);
+            GameObject.Find("Death Menu").GetComponent<DeathScreen>().dead = true;
         }
     }
 }

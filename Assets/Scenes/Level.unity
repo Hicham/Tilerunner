@@ -153,7 +153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 135670635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e6252554994694fb2b90f9d131c61e, type: 3}
+  m_Script: {fileID: 11500000, guid: 73bf4770475c0d74f8905fa550d42c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dead: 0
@@ -500,8 +500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 885982066}
-  playerObject: {fileID: 103438, guid: 3c3464b3316880b499808369848da3ab, type: 3}
-  deadlyObject: {fileID: 124218, guid: 88bee9c626d28fe42a680396b4d7eca1, type: 3}
+  playerObject: {fileID: 103438, guid: a2921b55bcf164853960c853662332ad, type: 3}
+  deadlyObject: {fileID: 124218, guid: 4ba430f162f394ec89163bcf70a24ee8, type: 3}
   castleObject: {fileID: 112090, guid: bf1f0766c99f04c47afb988e39cfa5cf, type: 3}
   brickObject: {fileID: 118424, guid: 4e582a70e0a5c4082bef410c4ddf6cd5, type: 3}
   levelName: {fileID: 382949730}
@@ -517,7 +517,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}

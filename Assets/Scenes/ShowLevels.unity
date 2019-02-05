@@ -286,8 +286,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1995583093}
   - component: {fileID: 1995583092}
-  - component: {fileID: 1995583091}
   - component: {fileID: 1995583094}
+  - component: {fileID: 1995583091}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -313,7 +313,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -333,7 +333,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294960127
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995583090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d69697ba24bebc499be821c790755c9, type: 3}
+  m_Script: {fileID: 11500000, guid: d58b10ecf748b154f8fcee4dab2a3ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1880583352123914, guid: 83c2a6b2c3fd4ba43a110e65c91564c2, type: 3}
+  button: {fileID: 1880583352123914, guid: 5579191d20182f3499e5cab77e488568, type: 3}
