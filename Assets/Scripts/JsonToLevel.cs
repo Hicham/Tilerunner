@@ -27,7 +27,7 @@ public class JsonToLevel : MonoBehaviour
 
         if (ClickedFile.name == null)
         {
-            path = Application.streamingAssetsPath + "/data.json";
+            path = Application.streamingAssetsPath + "/Level 1.json";
         }
         else
         {
