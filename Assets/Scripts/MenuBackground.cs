@@ -83,14 +83,8 @@ public class MenuBackground : MonoBehaviour {
 	
 	void Update ()
     {
-        if (mover.transform.position.x > 8)
-        {
-            direction = false;
-        }
-
-        if (mover.transform.position.x < -8)
-        {
-            direction = true;
+        if (mover.transform.position.x > 8 || mover.transform.position.x < -8) {
+            direction = !direction;         
         }
 
         
