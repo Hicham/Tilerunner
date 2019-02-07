@@ -183,13 +183,13 @@ public class Player : MonoBehaviour
 
             pos.y = hitRay.collider.bounds.center.y + hitRay.collider.bounds.size.y / 2 + 1;
         }
-//        else
-//        {
-//            if (playerState != PlayerState.jumping)
-//            {
-//                Fall();
-//            }
-//        }
+        else
+        {
+            if (playerState != PlayerState.jumping)
+            {
+                Fall();
+            }
+        }
 
         return pos;
     }
