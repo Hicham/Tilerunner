@@ -28,7 +28,7 @@ public class PassVar : MonoBehaviour
 
 public class ClickedFile
 {
-    public static string name = "";
+    public static string name = null;
     
     
 }

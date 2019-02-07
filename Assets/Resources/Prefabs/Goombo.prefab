@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9580702}
   - component: {fileID: 4024098969530355694}
   - component: {fileID: 5094680}
-  - component: {fileID: 1059049999065951855}
+  - component: {fileID: 3870001434203316845}
   m_Layer: 9
   m_Name: Goombo
   m_TagString: Enemy
@@ -161,7 +161,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1059049999065951855
+--- !u!114 &3870001434203316845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 124218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be9a81697537419d8e4689535bc29b24, type: 3}
+  m_Script: {fileID: 11500000, guid: ee932a3765be45b40a6e885dfdcf799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1558532204422701939
@@ -317,6 +317,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1558532204422701939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774c0a4d84a443b89fc89fd37860d454, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f88aea14f1aae742964bca15f5d1b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
