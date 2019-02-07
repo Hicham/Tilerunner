@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - QuestionBlock
-  - Enemy
   - Canvas
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,11 +16,11 @@ TagManager:
   - UI
   - 
   - 
+  - 
+  - Blocks
   - Enemies
   - Player
-  - LightSources
-  - LightObstacles
-  - AmbientLight
+  - Background
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 801333067
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

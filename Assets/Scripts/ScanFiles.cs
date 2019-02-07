@@ -27,18 +27,19 @@ public class ScanFiles : MonoBehaviour {
             button.GetComponentInChildren<Text>().text = f.Name.Replace(".json", "");
 
 
-            Instantiate(button, new Vector2(200 + offset.x, 400 + offset.y), Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
+            Instantiate(button, new Vector2(), Quaternion.identity, GameObject.FindGameObjectWithTag("Content").transform);
 
-            offset.counter++;
-            offset.x += 200;
+            // 200 + offset.x, 400 + offset.y
+            //offset.counter++;
+            //offset.x += 200;
 
-            if (offset.counter > 3)
-            {
-                offset.x = 0;
-                offset.y -= 100;
-                offset.counter = 0;
-            }
-            
+            //if (offset.counter > 3)
+            //{
+            //    offset.x = 0;
+            //    offset.y -= 100;
+            //    offset.counter = 0;
+            //}
+
 
         }
 
