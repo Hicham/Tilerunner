@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 4024098969530355694}
   - component: {fileID: 5094680}
   - component: {fileID: 3870001434203316845}
-  m_Layer: 9
+  - component: {fileID: 5878869304857120823}
+  m_Layer: 10
   m_Name: Goombo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -173,6 +174,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee932a3765be45b40a6e885dfdcf799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5878869304857120823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee13186bcfd4e599672cd83a12fa189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpVelocity: 23
+  velocity: {x: 7, y: 0}
+  gravity: 65
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 512
+  floorMask:
+    serializedVersion: 2
+    m_Bits: 512
+  playerState: 1
 --- !u!1 &1558532204422701939
 GameObject:
   m_ObjectHideFlags: 0
