@@ -31,7 +31,7 @@ if (letter.ToString() == *de letter je het object wilt geven)
 We hebben niet goed gefocused op de game zelf, en hierdoor heeft de game dus weinig inhoud.
 
 De game heeft nu één enemy met de naam goombo. Als de speler tegen de zijkant komt gaat hij dood, en als je op zn hoofd springt stuitert de speler en gaat de goombo dood.
-Alleen is de automatische movement van de goombo nog heel beperkt. Hierdoor moet iets op bedacht worden.
+Alleen is de automatische movement van de goombo nog heel beperkt. Hierop moet iets op bedacht worden.
 
 Als er een level word gemaakt die diep omlaag gaat. Moet er nu opgepast worden voor opengaten.
 Nu zoekt de script naar het laagste object in de game en als de speler er onder komt gaat hij dood.
