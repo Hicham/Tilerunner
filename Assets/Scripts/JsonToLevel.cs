@@ -31,7 +31,7 @@ public class JsonToLevel : MonoBehaviour
         }
         else
         {
-            path = Application.streamingAssetsPath + "/" + ClickedFile.name;
+            path = ClickedFile.path + "/" + ClickedFile.name;
         }
         jsonString = File.ReadAllText(path);
         Data json = JsonUtility.FromJson<Data>(jsonString);
