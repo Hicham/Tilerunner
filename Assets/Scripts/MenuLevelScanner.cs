@@ -42,6 +42,7 @@ public class MenuLevelScanner : MonoBehaviour {
         string path = EditorUtility.OpenFolderPanel("Load json levels", "", "");
         PlayerPrefs.SetString("Path", path);
         PlayerPrefs.Save();
+		Application.LoadLevel("ShowLevels");
     }
 }
 

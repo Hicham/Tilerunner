@@ -183,19 +183,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 124218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ee13186bcfd4e599672cd83a12fa189, type: 3}
+  m_Script: {fileID: 11500000, guid: c6b08fe4386d4eb458f3d136b766fd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 23
-  velocity: {x: 7, y: 0}
-  gravity: 65
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 512
-  floorMask:
-    serializedVersion: 2
-    m_Bits: 512
-  playerState: 1
 --- !u!1 &1558532204422701939
 GameObject:
   m_ObjectHideFlags: 0
