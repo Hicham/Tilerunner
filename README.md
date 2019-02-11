@@ -1,6 +1,6 @@
 # Level generator
 De levels worden opgeslagen in JSON, in een array. Elke string is een layer in het level, en elk nummer of letter daarin verwijst naar een object.
-Als voorbeeld de letter G staat voor brick en A voor air. Als de 1e string van de array "GG" bevat. spawnen er 2 stenen naast elkaar.
+Als voorbeeld de letter G staat voor brick en A voor air. Als de 1e string van de array "GG" bevat. spawnen er 2 blokjes naast elkaar.
 
 Objecten en de letters kunnen aangepast worden naar keus zonder problemen.
 
